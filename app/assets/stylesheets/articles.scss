@@ -1,3 +1,15 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$table-higlight-color: #daf1a226 !default;
+
+th{
+    font-size: 1.15rem;
+  }
+
+table.highlight > tbody > tr {
+  transition: background-color .25s ease;
+  &:hover {
+    background-color: $table-higlight-color;
+  }
+}

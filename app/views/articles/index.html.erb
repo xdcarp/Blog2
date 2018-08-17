@@ -2,13 +2,17 @@
 <%= link_to 'My Blog', controller: 'articles'%>
 <%= link_to 'New Article', new_article_path%>
  
-<table>
+<table class="striped highlight">
+  <thead>
   <tr>
     <th>Title</th>
     <th>Text</th>
     <th></th>
+    <th></th>
+    <th></th>
   </tr>
- 
+ </thead>
+ <tbody>
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.title %></td>
@@ -20,4 +24,5 @@
                 data: { confirm: 'Are you sure?'} %></td>
     </tr>
   <% end %>
+  </tbody>
 </table>

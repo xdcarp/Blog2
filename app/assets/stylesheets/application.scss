@@ -15,6 +15,19 @@
  *= require material_icons
  */
 
+ $table-striped-color: #ee6e7326 !default;
+
+ // 21. Typography
+ // ==========================================================================
+ // Header Styles
+ $h1-fontsize: 4rem !default;
+ $h2-fontsize: 3.1rem !default;
+ $h3-fontsize: 2.56rem !default;
+ $h4-fontsize: 2.1rem !default;
+ $h5-fontsize: 1.26rem !default;
+ $h6-fontsize: 1rem !default;
+
+
  body {
     display: flex;
     min-height: 100vh;
@@ -25,8 +38,9 @@
     flex: 1 0 auto;
   }
 
+@import "articles";
+@import "materialize";
+@import "materialize/extras/nouislider";
 
- @import "materialize";
- @import "materialize/extras/nouislider";
 
 
