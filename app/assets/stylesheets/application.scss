@@ -14,8 +14,12 @@
  *= require_self
  *= require material_icons
  */
+ 
 
- $table-striped-color: #ee6e7326 !default;
+@import "materialize/components/color";
+
+//1. Colors
+$secondary-color: #ad1457;
 
  // 21. Typography
  // ==========================================================================
@@ -38,9 +42,8 @@
     flex: 1 0 auto;
   }
 
-@import "articles";
 @import "materialize";
 @import "materialize/extras/nouislider";
-
+@import "articles";
 
 
