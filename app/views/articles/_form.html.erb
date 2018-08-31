@@ -14,21 +14,24 @@
   <% end %>
  
  <div class='row'>
-  <div class="input-field col s6">
-    <%= form.label :title %><br>
-    <%= form.text_field :title, class:'input-field col s6' %>
+    <div class="input-field col s6">
+      <%= form.label :title %><br>
+      <%= form.text_field :title, class:'input-field col s6' %>
+    </div>
   </div>
- 
-  <div class="input-field col s12">
-    <%= form.label :text %><br>
-    <%= form.text_area :text, class:'materialize-textarea' %>
-  </div>
- 
-  <div class="input-field col s12">
-    <!--<%= form.submit class: 'btn waves-effect waves-light' %>-->
-    <%= button_tag(type: "submit", class: 'btn waves-effect waves-light') do %>
-      <span><i class="material-icons right">send</i>Crear</span>
-    <% end %> 
-  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <%= form.label :text %><br>
+      <%= form.text_area :text, class:'materialize-textarea' %>
+    </div>
  </div>
+ <div class="row">
+    <div class="input-field col s6">
+      <!--<%= form.submit class: 'btn waves-effect waves-light' %>-->
+      <%= button_tag(type: "submit", class: 'btn waves-effect waves-light') do %>
+        <span><i class="material-icons right">send</i>Crear</span>
+      <% end %> 
+    </div>
+  </div>
+
 <% end %>

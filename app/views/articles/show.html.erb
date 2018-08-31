@@ -27,5 +27,11 @@
 <h4>Add a comment:</h4>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<!--<%= link_to 'Edit', edit_article_path(@article) %> -->
+<%= link_to edit_article_path(@article) do %>
+    <span title="Editar" class="btn-floating btn-small waves-effect waves-light pink"><i class="material-icons">edit</i></span>
+<% end %>
+<!--<%= link_to 'Back', articles_path %>-->
+<%= link_to articles_path do %>
+    <span title="Volver" class="btn-floating btn-small waves-effect waves-light pink"><i class="material-icons">navigate_before</i></span>
+<% end %>
