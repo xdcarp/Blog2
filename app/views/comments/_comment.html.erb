@@ -1,16 +1,15 @@
 
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+<li class="collection-item avatar">
+  <i class="material-icons circle red">comment</i>
+  <p>
+    <strong>Commenter: </strong><%= comment.commenter %>    
+  </p>  
+  <p>
+    <strong>Comment: </strong><%= comment.body %>    
+  </p>
+  <p class="secondary-content">
+    <%= link_to 'Destroy Comment', [comment.article, comment],
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+  </p>
+</li>

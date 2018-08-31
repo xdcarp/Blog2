@@ -1,13 +1,17 @@
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
-  <p>
+<div class='row'>
+  <div class="input-field col s6">
     <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
+    <%= form.text_field :commenter, class:'input-field col s6' %>
+  </div>
+  <div class="input-field col s12">
     <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+    <%= form.text_area :body, class:'materialize-textarea col s6' %>
+  </div>
+  <div class="input-field col s12">
+    <%= button_tag(type: "submit", class: 'btn waves-effect waves-light') do %>
+      <span><i class="material-icons right">send</i>Crear Comentario</span>
+    <% end %>
+  </div>
+</div>
 <% end %>

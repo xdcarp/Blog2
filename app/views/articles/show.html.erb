@@ -1,19 +1,30 @@
-<h1>Showing data from article: <%= @article.id %></h1>
+<h2>Mostando datos del artículo de Id: <%= @article.id %></h2>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+<div class="row">
+  <div class="col 12 s12 m6">
+    <div class="card  pink">
+      <div class="card-content white-text">
+        <span class="card-title">Titulo: <%= @article.title %></span>
+        <p>
+          <strong>Text:</strong>
+          <%= @article.text %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+<h3>Comments</h3>
+<br>
+<div class="row">
+  <div class="col s6">
+    <ul class="collection">
+      <%= render @article.comments %>
+    </ul>
+  </div>
+</div>
 
-<h2>Add a comment:</h2>
+<h4>Add a comment:</h4>
 <%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |

@@ -3,8 +3,7 @@
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
+        <%= pluralize(@article.errors.count, "error") %> errores no permitieron grabar este artículo:
       </h2>
       <ul>
         <% @article.errors.full_messages.each do |msg| %>
@@ -14,18 +13,22 @@
     </div>
   <% end %>
  
-  <p>
+ <div class='row'>
+  <div class="input-field col s6">
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+    <%= form.text_field :title, class:'input-field col s6' %>
+  </div>
  
-  <p>
+  <div class="input-field col s12">
     <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
+    <%= form.text_area :text, class:'materialize-textarea' %>
+  </div>
  
-  <p>
-    <%= form.submit %>
-  </p>
- 
+  <div class="input-field col s12">
+    <!--<%= form.submit class: 'btn waves-effect waves-light' %>-->
+    <%= button_tag(type: "submit", class: 'btn waves-effect waves-light') do %>
+      <span><i class="material-icons right">send</i>Crear</span>
+    <% end %> 
+  </div>
+ </div>
 <% end %>

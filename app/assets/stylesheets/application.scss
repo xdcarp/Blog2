@@ -19,7 +19,7 @@
 @import "materialize/components/color";
 
 //1. Colors
-$secondary-color: #ad1457;
+$secondary-color: #c2185b;
 
  // 21. Typography
  // ==========================================================================
@@ -40,6 +40,29 @@ $secondary-color: #ad1457;
 
   main {
     flex: 1 0 auto;
+  }
+
+  //Container Footer
+  .container-footer {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+  }
+  
+  @media only screen and (min-width: 601px) {
+    .container-footer {
+      width: 85%;
+    }
+  }
+  @media only screen and (min-width: 993px) {
+    .container-footer {
+      width: 70%;
+    }
+  }
+  /* line 16, C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
+  .container-footer .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
   }
 
 @import "materialize";
